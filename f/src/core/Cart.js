@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../styles.css";
-import { API } from "../backend";
 import Base from "./Base";
 import Card from "./Card";
 import { loadCart } from "./helper/carthelper";
+import { isAuthenticated } from "../auth/helper";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 	const [products, setProducts] = useState([]);
@@ -42,8 +43,16 @@ const Cart = () => {
 	return (
 		<Base title="Cart Page" description="Ready to checkout">
 			<div className="row text-white">
-				<div className="col-6">{loadAllProducts()}</div>
-				<div className="col-6">{loadCheckout()}</div>
+				{!isAuthenticated().user ? (
+					<h6>
+						Please <Link to="/signin">SignIn</Link> first.
+					</h6>
+				) : (
+					<>
+						<div className="col-md-6">{loadAllProducts()}</div>
+						<div className="col-md-6">{loadCheckout()}</div>
+					</>
+				)}
 			</div>
 		</Base>
 	);

@@ -17,13 +17,12 @@ const Base = ({
 				</div>
 				<div className={className}>{children}</div>
 			</div>
-			<footer className="footer bg-dark mt-auto py-3">
-				<div className="container-fluid bg-success text-white text-center">
-					<h4>If you got any query.Feel free to reach out!</h4>
-					<button className="btn btn-warning btn-lg">Contact Us</button>
-				</div>
-				<div className="container">
-					<span className="text-muted">This is an amazing MERN bootcamp</span>
+			<footer className="footer bg-dark mt-5">
+				<div className=" pb-4 container-fluid p-3 bg-success text-white text-center">
+					<h4 className="p-3">Feel free to reach out in case of queries.</h4>
+					<button style={{ fontWeight: "bold" }} className="btn btn-warning">
+						Contact Us
+					</button>
 				</div>
 			</footer>
 		</div>

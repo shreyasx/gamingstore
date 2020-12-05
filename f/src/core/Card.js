@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Imagehelper from "./helper/Imagehelper";
 import { Redirect } from "react-router-dom";
 import { addItemToCart, removeItemFromCart } from "./helper/carthelper";
@@ -8,7 +8,6 @@ const Card = ({
 	addtoCart = true,
 	removeFromCart = false,
 	setReload = f => f,
-	//(funtion f){return f}
 	reload = undefined,
 }) => {
 	const [redirect, setRedirect] = useState(false);

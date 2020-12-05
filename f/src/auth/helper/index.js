@@ -40,6 +40,7 @@ export const authenticate = (data, next) => {
 export const signout = next => {
 	if (typeof window !== "undefined") {
 		localStorage.removeItem("jwt");
+		localStorage.removeItem("cart");
 		next();
 	}
 
