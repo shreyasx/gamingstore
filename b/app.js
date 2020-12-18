@@ -14,6 +14,7 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const paymentRoutes = require("./routes/payment");
+const cartRoutes = require("./routes/cart");
 
 mongoose
 	.connect(process.env.DATABASE, {
@@ -27,6 +28,7 @@ mongoose
 
 //Middlewares
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 
@@ -37,6 +39,7 @@ app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", paymentRoutes);
+app.use("/api", cartRoutes);
 
 //Port
 const port = process.env.PORT || 8000;

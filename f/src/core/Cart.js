@@ -9,9 +9,13 @@ import { Link } from "react-router-dom";
 const Cart = () => {
 	const [products, setProducts] = useState([]);
 	const [reload, setReload] = useState(false);
+	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		setProducts(loadCart());
+	useEffect(async () => {
+		const ps = await loadCart(isAuthenticated().user._id);
+		console.log(ps);
+		setProducts(ps);
+		setLoading(false);
 	}, [reload]);
 
 	const loadAllProducts = () => {
@@ -49,7 +53,9 @@ const Cart = () => {
 					</h6>
 				) : (
 					<>
-						<div className="col-md-6">{loadAllProducts()}</div>
+						<div className="col-md-6">
+							{loading ? <h2>Loading Products...</h2> : loadAllProducts()}
+						</div>
 						<div className="col-md-6">{loadCheckout()}</div>
 					</>
 				)}
