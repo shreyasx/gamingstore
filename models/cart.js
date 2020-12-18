@@ -5,6 +5,7 @@ const CartSchema = new mongoose.Schema({
 	user: {
 		type: ObjectId,
 		ref: "User",
+		required: true,
 	},
 	products: [],
 });

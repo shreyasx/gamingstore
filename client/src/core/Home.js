@@ -26,6 +26,7 @@ export default function Home() {
 		<Base title="Home Page" description="Welcome to our Gaming Store!">
 			<div className="row text-center">
 				<h1 className="text-white">Games Collection</h1>
+				{error ? error : ""}
 				<div className="row">
 					{products.map((product, index) => {
 						return (

@@ -58,9 +58,7 @@ const removeFromCart = (req, res) => {
 
 const getProducts = (req, res) => {
 	const { id } = req.body;
-	console.log(req.body);
 	Cart.findOne({ user: id }, (er, cart) => {
-		console.log("cart- ", cart);
 		if (er) {
 			console.log(er);
 			return;

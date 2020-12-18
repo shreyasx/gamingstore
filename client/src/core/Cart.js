@@ -11,11 +11,12 @@ const Cart = () => {
 	const [reload, setReload] = useState(false);
 	const [loading, setLoading] = useState(true);
 
-	useEffect(async () => {
-		const ps = await loadCart(isAuthenticated().user._id);
-		console.log(ps);
-		setProducts(ps);
-		setLoading(false);
+	useEffect(() => {
+		(async () => {
+			const ps = await loadCart(isAuthenticated().user._id);
+			setProducts(ps);
+			setLoading(false);
+		})();
 	}, [reload]);
 
 	const loadAllProducts = () => {
