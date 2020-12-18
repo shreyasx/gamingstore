@@ -20,7 +20,7 @@ const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact component={Home} />
+				<Route path="/gamingstore-frontend" exact component={Home} />
 				<Route path="/signup" exact component={Signup} />
 				<Route path="/signin" exact component={Signin} />
 				<Route path="/cart" exact component={Cart} />
