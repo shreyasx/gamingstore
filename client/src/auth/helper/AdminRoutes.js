@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Redirect, Route } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 import { isAuthenticated } from ".";
 
 const AdminRoute = ({ component: Component, ...rest }) => {
