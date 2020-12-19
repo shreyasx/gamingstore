@@ -178,7 +178,10 @@ const AddProduct = () => {
 			description="Welcome to product creation section"
 			className="container bg-info p-4"
 		>
-			<Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
+			<Link
+				to="/gamingstore-frontend/admin/dashboard"
+				className="btn btn-md btn-dark mb-3"
+			>
 				Admin Home
 			</Link>
 			<div className="row bg-dark text-white rounded">

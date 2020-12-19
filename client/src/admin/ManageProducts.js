@@ -36,7 +36,10 @@ const ManageProducts = () => {
 	return (
 		<Base title="Welcome admin" description="Manage products here">
 			<h2 className="mb-4 text-white">All products:</h2>
-			<Link className="btn btn-info" to={`/admin/dashboard`}>
+			<Link
+				className="btn btn-info"
+				to={`/gamingstore-frontend/admin/dashboard`}
+			>
 				<span className="">Admin Home</span>
 			</Link>
 			<div className="row">
@@ -50,7 +53,7 @@ const ManageProducts = () => {
 							<div className="col-4">
 								<Link
 									className="btn btn-success"
-									to={`/admin/product/update/${product._id}`}
+									to={`/gamingstore-frontend/admin/product/update/${product._id}`}
 								>
 									<span className="">Update</span>
 								</Link>

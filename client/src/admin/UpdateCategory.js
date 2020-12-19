@@ -27,7 +27,10 @@ const UpdateCategory = ({ match }) => {
 
 	const goBack = () => (
 		<div className="mt-5">
-			<Link className="btn btn-sm btn-success mb-3" to="/admin/dashboard">
+			<Link
+				className="btn btn-sm btn-success mb-3"
+				to="/gamingstore-frontend/admin/dashboard"
+			>
 				Admin Home
 			</Link>
 		</div>
@@ -80,7 +83,7 @@ const UpdateCategory = ({ match }) => {
 					className="form-control my-3"
 					autoFocus
 					required
-					placeholder="For ex. Summer"
+					placeholder="For ex. 'Racing'"
 				/>
 				<button onClick={onSubmit} className="btn btn-outline-info">
 					Update category
