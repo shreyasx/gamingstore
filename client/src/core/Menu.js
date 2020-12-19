@@ -72,15 +72,6 @@ const Menu = ({ history }) => {
 								SignIn
 							</Link>
 						</li>
-						<li className="nav-item">
-							<Link
-								style={currentTab(history, "/about")}
-								className="nav-link"
-								to="/about"
-							>
-								About Us
-							</Link>
-						</li>
 					</Fragment>
 				)}
 				{isAuthenticated() && (
@@ -97,6 +88,15 @@ const Menu = ({ history }) => {
 						</span>
 					</li>
 				)}
+				<li className="nav-item">
+					<Link
+						style={currentTab(history, "/about")}
+						className="nav-link"
+						to="/about"
+					>
+						About Us
+					</Link>
+				</li>
 			</ul>
 		</div>
 	);
