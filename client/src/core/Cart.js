@@ -20,30 +20,25 @@ const Cart = () => {
 	}, [reload]);
 
 	const loadAllProducts = () => {
-		return (
-			<div>
-				<h2>This section is to load products</h2>
-				{products.map((product, index) => (
-					<Card
-						key={index}
-						product={product}
-						addtoCart={false}
-						removeFromCart={true}
-						setReload={setReload}
-						reload={reload}
-					/>
-				))}
-			</div>
-		);
+		if (products.length === 0) return "No items in your cart. Go add some now!";
+		else
+			return (
+				<div>
+					{products.map((product, index) => (
+						<Card
+							key={index}
+							product={product}
+							addtoCart={false}
+							removeFromCart={true}
+							setReload={setReload}
+							reload={reload}
+						/>
+					))}
+				</div>
+			);
 	};
 
-	const loadCheckout = () => {
-		return (
-			<div>
-				<h2>This section for checkout</h2>
-			</div>
-		);
-	};
+	const loadCheckout = () => <h2>This Section for Checking out:</h2>;
 
 	return (
 		<Base title="Cart Page" description="Ready to checkout">
@@ -55,7 +50,8 @@ const Cart = () => {
 				) : (
 					<>
 						<div className="col-md-6">
-							{loading ? <h2>Loading Products...</h2> : loadAllProducts()}
+							<h2>Your Cart:</h2>
+							{loading ? <h2>Loading Cart...</h2> : loadAllProducts()}
 						</div>
 						<div className="col-md-6">{loadCheckout()}</div>
 					</>
