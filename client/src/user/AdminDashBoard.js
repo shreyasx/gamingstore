@@ -14,34 +14,22 @@ const AdminDashboard = () => {
 				<h4 className="card-header bg-dark text-white">Admin Navigation</h4>
 				<ul className="list-group">
 					<li className="list-group-item">
-						<Link
-							to="/gamingstore-frontend/admin/create/category"
-							className="nav-link text-success"
-						>
+						<Link to="/admin/create/category" className="nav-link text-success">
 							Create New Category
 						</Link>
 					</li>
 					<li className="list-group-item">
-						<Link
-							to="/gamingstore-frontend/admin/categories"
-							className="nav-link text-success"
-						>
+						<Link to="/admin/categories" className="nav-link text-success">
 							Manage Categories
 						</Link>
 					</li>
 					<li className="list-group-item">
-						<Link
-							to="/gamingstore-frontend/admin/create/product"
-							className="nav-link text-success"
-						>
+						<Link to="/admin/create/product" className="nav-link text-success">
 							Create Product
 						</Link>
 					</li>
 					<li className="list-group-item">
-						<Link
-							to="/gamingstore-frontend/admin/products"
-							className="nav-link text-success"
-						>
+						<Link to="/admin/products" className="nav-link text-success">
 							Manage Products
 						</Link>
 					</li>

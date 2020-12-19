@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Router, Redirect, Route } from "react-router-dom";
 import { isAuthenticated } from ".";
 
 const AdminRoute = ({ component: Component, ...rest }) => {
@@ -12,7 +12,7 @@ const AdminRoute = ({ component: Component, ...rest }) => {
 				) : (
 					<Redirect
 						to={{
-							pathname: "/gamingstore-frontend/signin",
+							pathname: "/signin",
 							state: { from: props.location },
 						}}
 					/>

@@ -203,10 +203,7 @@ const UpdateProduct = ({ match }) => {
 			description="Welcome to Product creation section"
 			className="container bg-info p-4"
 		>
-			<Link
-				to="/gamingstore-frontend/admin/dashboard"
-				className="btn btn-md btn-dark mb-3"
-			>
+			<Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
 				Admin Home
 			</Link>
 			<div className="row bg-dark text-white rounded">

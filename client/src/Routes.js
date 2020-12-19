@@ -20,53 +20,37 @@ const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/gamingstore-frontend" exact component={Home} />
-				<Route path="/gamingstore-frontend/signup" exact component={Signup} />
-				<Route path="/gamingstore-frontend/signin" exact component={Signin} />
-				<Route path="/gamingstore-frontend/cart" exact component={Cart} />
-				<Route path="/gamingstore-frontend/about" exact component={AboutUs} />
-				<PrivateRoute
-					path="/gamingstore-frontend/user/dashboard"
-					exact
-					component={UserDashboard}
-				/>
+				<Route path="/" exact component={Home} />
+				<Route path="/signup" exact component={Signup} />
+				<Route path="/signin" exact component={Signin} />
+				<Route path="/cart" exact component={Cart} />
+				<Route path="/about" exact component={AboutUs} />
+				<PrivateRoute path="/user/dashboard" exact component={UserDashboard} />
+				<AdminRoute path="/admin/dashboard" exact component={AdminDashboard} />
 				<AdminRoute
-					path="/gamingstore-frontend/admin/dashboard"
-					exact
-					component={AdminDashboard}
-				/>
-				<AdminRoute
-					path="/gamingstore-frontend/admin/create/category"
+					path="/admin/create/category"
 					exact
 					component={AddCategory}
 				/>
 				<AdminRoute
-					path="/gamingstore-frontend/admin/categories"
+					path="/admin/categories"
 					exact
 					component={ManageCategories}
 				/>
+				<AdminRoute path="/admin/create/product" exact component={AddProduct} />
+				<AdminRoute path="/admin/products" exact component={ManageProducts} />
 				<AdminRoute
-					path="/gamingstore-frontend/admin/create/product"
-					exact
-					component={AddProduct}
-				/>
-				<AdminRoute
-					path="/gamingstore-frontend/admin/products"
-					exact
-					component={ManageProducts}
-				/>
-				<AdminRoute
-					path="/gamingstore-frontend/admin/product/update/:productId"
+					path="/admin/product/update/:productId"
 					exact
 					component={UpdateProduct}
 				/>
 				<AdminRoute
-					path="/gamingstore-frontend/admin/categories"
+					path="/admin/categories"
 					exact
 					component={ManageCategories}
 				/>
 				<AdminRoute
-					path="/gamingstore-frontend/admin/category/update/:categoryId"
+					path="/admin/category/update/:categoryId"
 					exact
 					component={UpdateCategory}
 				/>

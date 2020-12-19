@@ -89,7 +89,7 @@ const Signup = () => {
 						style={{ display: success ? "" : "none" }}
 					>
 						New account was created successfully. Please
-						<Link to="/gamingstore-frontend/signin">Login Here</Link>.
+						<Link to="/signin">Login Here</Link>
 					</div>
 				</div>
 			</div>

@@ -50,7 +50,7 @@ const Cart = () => {
 			<div className="row text-white">
 				{!isAuthenticated().user ? (
 					<h6>
-						Please <Link to="/gamingstore-frontend/signin">SignIn</Link> first.
+						Please <Link to="/signin">SignIn</Link> first.
 					</h6>
 				) : (
 					<>

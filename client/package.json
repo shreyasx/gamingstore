@@ -1,6 +1,5 @@
 {
   "name": "projfrontend",
-  "homepage": "https://shreyasx.github.io/gamingstore-frontend/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

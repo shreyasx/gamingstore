@@ -13,10 +13,7 @@ const AddCategory = () => {
 
 	const goBack = () => (
 		<div className="mt-5">
-			<Link
-				className="btn btn-sm btn-success mb-3"
-				to="/gamingstore-frontend/admin/dashboard"
-			>
+			<Link className="btn btn-sm btn-success mb-3" to="/admin/dashboard">
 				Admin Home
 			</Link>
 		</div>

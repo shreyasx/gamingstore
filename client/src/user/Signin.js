@@ -41,14 +41,14 @@ const Signin = () => {
 	const performRedirect = () => {
 		if (didRedirect) {
 			if (user && user.role === 1) {
-				return <Redirect to="/gamingstore-frontend/admin/dashboard" />;
+				return <Redirect to="/admin/dashboard" />;
 			} else {
-				return <Redirect to="/gamingstore-frontend/user/dashboard" />;
+				return <Redirect to="/user/dashboard" />;
 			}
 		}
 
 		if (isAuthenticated()) {
-			return <Redirect to="/gamingstore-frontend/" />;
+			return <Redirect to="/" />;
 		}
 	};
 

@@ -15,20 +15,16 @@ const Menu = ({ history }) => {
 		<div>
 			<ul className="nav nav-tabs bg-dark">
 				<li className="nav-item">
-					<Link
-						style={currentTab(history, "/gamingstore-frontend/")}
-						className="nav-link"
-						to="/gamingstore-frontend/"
-					>
+					<Link style={currentTab(history, "/")} className="nav-link" to="/">
 						Home
 					</Link>
 				</li>
 				{isAuthenticated() && isAuthenticated().user.role !== 1 && (
 					<li className="nav-item">
 						<Link
-							style={currentTab(history, "/gamingstore-frontend/cart")}
+							style={currentTab(history, "/cart")}
 							className="nav-link"
-							to="/gamingstore-frontend/cart"
+							to="/cart"
 						>
 							Cart
 						</Link>
@@ -37,12 +33,9 @@ const Menu = ({ history }) => {
 				{isAuthenticated() && isAuthenticated().user.role === 0 && (
 					<li className="nav-item">
 						<Link
-							style={currentTab(
-								history,
-								"/gamingstore-frontend/user/dashboard"
-							)}
+							style={currentTab(history, "/user/dashboard")}
 							className="nav-link"
-							to="/gamingstore-frontend/user/dashboard"
+							to="/user/dashboard"
 						>
 							U. Dashboard
 						</Link>
@@ -51,12 +44,9 @@ const Menu = ({ history }) => {
 				{isAuthenticated() && isAuthenticated().user.role === 1 && (
 					<li className="nav-item">
 						<Link
-							style={currentTab(
-								history,
-								"/gamingstore-frontend/admin/dashboard"
-							)}
+							style={currentTab(history, "/admin/dashboard")}
 							className="nav-link"
-							to="/gamingstore-frontend/admin/dashboard"
+							to="/admin/dashboard"
 						>
 							A. Dashboard
 						</Link>
@@ -66,18 +56,18 @@ const Menu = ({ history }) => {
 					<Fragment>
 						<li className="nav-item">
 							<Link
-								style={currentTab(history, "/gamingstore-frontend/signup")}
+								style={currentTab(history, "/signup")}
 								className="nav-link"
-								to="/gamingstore-frontend/signup"
+								to="/signup"
 							>
 								SignUp
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link
-								style={currentTab(history, "/gamingstore-frontend/signin")}
+								style={currentTab(history, "/signin")}
 								className="nav-link"
-								to="/gamingstore-frontend/signin"
+								to="/signin"
 							>
 								SignIn
 							</Link>
@@ -90,7 +80,7 @@ const Menu = ({ history }) => {
 							className="nav-link text-warning"
 							onClick={() => {
 								signout(() => {
-									history.push("/gamingstore-frontend/");
+									history.push("/");
 								});
 							}}
 						>

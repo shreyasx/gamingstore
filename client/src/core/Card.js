@@ -26,7 +26,7 @@ const Card = ({
 
 	const getARedirect = redir => {
 		if (redir) {
-			return <Redirect to="/gamingstore-frontend/cart" />;
+			return <Redirect to="/cart" />;
 		}
 	};
 
@@ -42,7 +42,7 @@ const Card = ({
 				</button>
 			) : (
 				<Link
-					to="/#/gamingstore-frontend/signin"
+					to="/signin"
 					className="btn btn-block btn-outline-success mt-2 mb-2"
 				>
 					Signin to Add to Cart
@@ -57,7 +57,7 @@ const Card = ({
 				<button
 					onClick={() => {
 						removeItemFromCart(product._id, () => {
-							window.location.href = "/gamingstore-frontend/cart";
+							window.location.href = "/cart";
 						});
 					}}
 					className="btn btn-block btn-outline-danger mt-2 mb-2"
