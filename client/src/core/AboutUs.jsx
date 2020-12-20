@@ -14,6 +14,7 @@ const AboutUs = () => {
 				<div className="col-lg-4">
 					<h3>Tanay Gargate</h3>
 					<p>USN: 2GI19CS162</p>
+					<p>Email: 2gi19cs162@students.git.edu</p>
 				</div>
 				<div
 					onClick={redirect}
@@ -22,6 +23,7 @@ const AboutUs = () => {
 				>
 					<h3 style={{ fontSize: "1.8em" }}>Shreyas Jamkhandi</h3>
 					<p>USN: 2GI19CS140</p>
+					<p>Email: 2gi19cs140@students.git.edu</p>
 					<p style={{ fontSize: "smaller", fontWeight: "lighter" }}>
 						Click to know more!
 					</p>
@@ -29,6 +31,7 @@ const AboutUs = () => {
 				<div className="col-lg-4">
 					<h3>Shrikrishna Keeliputti</h3>
 					<p>USN: 2GI19CS141</p>
+					<p>Email: 2gi19cs141@students.git.edu</p>
 				</div>
 			</div>
 			<h4

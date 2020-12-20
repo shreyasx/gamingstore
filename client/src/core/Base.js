@@ -1,5 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 const Base = ({
 	title = "My Title",
@@ -20,9 +21,11 @@ const Base = ({
 			<footer className="footer bg-dark mt-5">
 				<div className=" pb-4 container-fluid p-3 bg-success text-white text-center">
 					<h4 className="p-3">Feel free to reach out in case of queries.</h4>
-					<button style={{ fontWeight: "bold" }} className="btn btn-warning">
-						Contact Us
-					</button>
+					<Link to="/about">
+						<button style={{ fontWeight: "bold" }} className="btn btn-warning">
+							Contact Us
+						</button>
+					</Link>
 				</div>
 			</footer>
 		</div>
