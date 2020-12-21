@@ -110,7 +110,10 @@ const Signin = () => {
 	};
 
 	return (
-		<Base title="Signin Page" description="A page for user to signin">
+		<Base
+			title="Signin Page"
+			description="Signin to your account and add your favourite games to your cart!"
+		>
 			{loadingMessage()}
 			{errorMessage()}
 			{signinForm()}
