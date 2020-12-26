@@ -12,6 +12,11 @@ const {
 const { getUserById } = require("../controllers/user");
 const { isSignedIn, isAuthenticated, isAdmin } = require("../controllers/auth");
 
+const {
+	getProducts,
+	getCategories,
+} = require("../controllers/categoryProduct");
+
 //params
 router.param("userId", getUserById);
 router.param("categoryId", getCategoryById);
@@ -48,5 +53,8 @@ router.delete(
 	isAdmin,
 	removeCategory
 );
+
+router.get("/getProducts", getProducts);
+router.get("/getCategories", getCategories);
 
 module.exports = router;
